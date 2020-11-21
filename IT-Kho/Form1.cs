@@ -46,7 +46,13 @@ namespace IT_Kho
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
         {
-
+            if (!container.Controls.Contains(Xuatkho.Instance))
+            {
+                container.Controls.Add(Xuatkho.Instance);
+                Xuatkho.Instance.Dock = DockStyle.Fill;
+                Xuatkho.Instance.BringToFront();
+            }
+            Xuatkho.Instance.BringToFront();
         }
 
         private void accordionControlElement3_Click(object sender, EventArgs e)
@@ -63,6 +69,28 @@ namespace IT_Kho
         private void accordionControlElement6_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void accordionControlElement20_Click(object sender, EventArgs e)
+        {
+            if (!container.Controls.Contains(Taikhoan.Instance))
+            {
+                container.Controls.Add(Taikhoan.Instance);
+                Taikhoan.Instance.Dock = DockStyle.Fill;
+                Taikhoan.Instance.BringToFront();
+            }
+            Taikhoan.Instance.BringToFront();
+        }
+
+        private void accordionControlElement19_Click(object sender, EventArgs e)
+        {
+            if (!container.Controls.Contains(Vattu.Instance))
+            {
+                container.Controls.Add(Vattu.Instance);
+                Vattu.Instance.Dock = DockStyle.Fill;
+                Vattu.Instance.BringToFront();
+            }
+            Vattu.Instance.BringToFront();
         }
     }
 }

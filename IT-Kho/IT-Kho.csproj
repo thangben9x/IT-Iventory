@@ -69,6 +69,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taikhoan.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Taikhoan.Designer.cs">
+      <DependentUpon>Taikhoan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vattu.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Vattu.Designer.cs">
+      <DependentUpon>Vattu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Xuatkho.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +103,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Taikhoan.resx">
+      <DependentUpon>Taikhoan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vattu.resx">
+      <DependentUpon>Vattu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Xuatkho.resx">
       <DependentUpon>Xuatkho.cs</DependentUpon>
     </EmbeddedResource>
