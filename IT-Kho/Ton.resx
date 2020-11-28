@@ -117,30 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="barButtonItem1.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAb5JREFUWEft
-        l8tKw0AUhvsArrysRVBw4+0FvG20SScXS3wYQaiuVAShCx+i1Fz0LSqI4FbqSje6VGwFG8+RE1snJ7VJ
-        KgPiBz+Ezjn/P50kk6TwTxacmjMi6uVZLTCWUXiMv9Hw71Cql2d039zTPeuy5FkdUCjpHdQAVYzAmKa2
-        /NiuPSY8qwp66wn7SW2oP9moOaNkkw3h2utg9iSZp9GjHhhrZJcO+AfbYNCSDNPLN19113bIdjCgcTXl
-        kvcVesFqrpB9f4o1ZwIaHjijnLrH64likoHwU6Z5KALvKsXwiHMxBYVtuZHTQeMojMBjroZRSzvbmqS4
-        ODDDfaaJVcYJoCoUFwcGb6TiROWYwDXFfUdciHGmOFE5JtBhNyjNsxaZ4i9hSK/824Diw89jeZzziARb
-        9TzFdoHzX+SKI6WF84ikufYmxXZRPoGSay9wxZHkJc5zCjTfnKPYLsovQgQGr6TiRGWdAL5PUFwcGNzl
-        mjhlnoBv7lBcHOVbMQJ3wzHTOCwdUkwyyh/HCOxUS9DwIhnk0TPutGQ/GLAK6l7JInBzgjvjjjUeTE12
-        30+D0tfyXpR9mHAo+TT7oxQKH203m0w3C3bfAAAAAElFTkSuQmCC
-</value>
-  </data>
-  <data name="barButtonItem2.ImageOptions.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAWBJREFUSEvt
-        lk1KAzEcR3OICq1WdOExRETQtSCIV6iIqKfwBC66Etz1AFIvoqJ4AletgoK28QV+A0OSasYJjos+eHTg
-        /9VMQxoz59+xYk1n0ZpDvMFbfJbuebhkTW/BmrbS69O1Zo3GA5yg/UGXM3A1Kv8dHWv2aPRaapzqC+6q
-        TTV4dWcUT0vNqjrhi5+oXRoUHWCdoYVTFrCvtt9DYpeCsdegjiO3MdV+Ngy+ihTX9VLt47StWSUpZfdW
-        9ROXNSaE1Z56BTk91pgQgkMvOZss6lpjQkh49Asyeq8xIQSD3cwptKlwMqxuy++DI4VDCMZOqXWFk+Hg
-        2Ij0GSscQvDBS87pncaEEGxscx35BblkcE9jQho7QBwk9EsFubxQ+9nwSpr5k3CQvIPu9cQaVfEDt9U2
-        DVb+9xeBgkauPgU0aOE5vmFsSFmX43JbKq9P+XrLz/DE57tTz/mvt3PyYMwX3AqeWLGCPc4AAAAASUVO
-        RK5CYII=
-</value>
-  </data>
 </root>

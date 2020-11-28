@@ -47,11 +47,11 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(398, 18);
+            this.labelControl1.Location = new System.Drawing.Point(461, 16);
             this.labelControl1.Name = "labelControl1";
-            this.labelControl1.Size = new System.Drawing.Size(284, 42);
+            this.labelControl1.Size = new System.Drawing.Size(200, 42);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Nhập Mới Vật Tư";
+            this.labelControl1.Text = "Xuất Vật Tư";
             // 
             // Xuatkho
             // 
