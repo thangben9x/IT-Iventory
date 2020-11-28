@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.container = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormContainer();
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
@@ -54,32 +53,9 @@
             this.accordionControlElement20 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.fluentDesignFormControl1 = new DevExpress.XtraBars.FluentDesignSystem.FluentDesignFormControl();
             this.barButtonItem1 = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu1 = new DevExpress.XtraBars.PopupMenu(this.components);
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
-            this.barSubItem2 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem3 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem4 = new DevExpress.XtraBars.BarButtonItem();
-            this.popupMenu2 = new DevExpress.XtraBars.PopupMenu(this.components);
-            this.barSubItem3 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem5 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem4 = new DevExpress.XtraBars.BarSubItem();
-            this.barSubItem5 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem6 = new DevExpress.XtraBars.BarButtonItem();
-            this.barLargeButtonItem1 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barSubItem6 = new DevExpress.XtraBars.BarSubItem();
-            this.barButtonItem7 = new DevExpress.XtraBars.BarButtonItem();
-            this.barButtonItem8 = new DevExpress.XtraBars.BarButtonItem();
-            this.barSubItem7 = new DevExpress.XtraBars.BarSubItem();
-            this.barLargeButtonItem2 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem3 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barSubItem8 = new DevExpress.XtraBars.BarSubItem();
-            this.barLargeButtonItem4 = new DevExpress.XtraBars.BarLargeButtonItem();
-            this.barLargeButtonItem5 = new DevExpress.XtraBars.BarLargeButtonItem();
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).BeginInit();
             this.SuspendLayout();
             // 
             // container
@@ -113,6 +89,7 @@
             this.accordionControlElement1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement2,
             this.accordionControlElement3});
+            this.accordionControlElement1.Expanded = true;
             this.accordionControlElement1.Name = "accordionControlElement1";
             this.accordionControlElement1.Text = "KHO THIẾT BỊ";
             this.accordionControlElement1.Click += new System.EventHandler(this.accordionControlElement1_Click);
@@ -135,6 +112,7 @@
             // 
             this.accordionControlElement4.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement6});
+            this.accordionControlElement4.Expanded = true;
             this.accordionControlElement4.Name = "accordionControlElement4";
             this.accordionControlElement4.Text = "HỆ THỐNG PC";
             // 
@@ -233,6 +211,7 @@
             this.accordionControlElement18.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
             this.accordionControlElement19,
             this.accordionControlElement20});
+            this.accordionControlElement18.Expanded = true;
             this.accordionControlElement18.Name = "accordionControlElement18";
             this.accordionControlElement18.Text = "QUẢN LÝ ";
             // 
@@ -240,14 +219,14 @@
             // 
             this.accordionControlElement19.Name = "accordionControlElement19";
             this.accordionControlElement19.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement19.Text = "Tài Khoản";
+            this.accordionControlElement19.Text = "Vật Tư";
             this.accordionControlElement19.Click += new System.EventHandler(this.accordionControlElement19_Click);
             // 
             // accordionControlElement20
             // 
             this.accordionControlElement20.Name = "accordionControlElement20";
             this.accordionControlElement20.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.accordionControlElement20.Text = "Vật Tư";
+            this.accordionControlElement20.Text = "Tài Khoản";
             this.accordionControlElement20.Click += new System.EventHandler(this.accordionControlElement20_Click);
             // 
             // fluentDesignFormControl1
@@ -255,51 +234,26 @@
             this.fluentDesignFormControl1.FluentDesignForm = this;
             this.fluentDesignFormControl1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
             this.barButtonItem1,
-            this.barButtonItem2,
-            this.barSubItem1,
-            this.barSubItem2,
-            this.barButtonItem3,
-            this.barButtonItem4,
-            this.barSubItem3,
-            this.barButtonItem5,
-            this.barSubItem4,
-            this.barSubItem5,
-            this.barButtonItem6,
-            this.barLargeButtonItem1,
-            this.barSubItem6,
-            this.barButtonItem7,
-            this.barButtonItem8,
-            this.barSubItem7,
-            this.barLargeButtonItem2,
-            this.barLargeButtonItem3,
-            this.barSubItem8,
-            this.barLargeButtonItem4,
-            this.barLargeButtonItem5});
+            this.barButtonItem2});
             this.fluentDesignFormControl1.Location = new System.Drawing.Point(0, 0);
             this.fluentDesignFormControl1.Margin = new System.Windows.Forms.Padding(2);
             this.fluentDesignFormControl1.Name = "fluentDesignFormControl1";
             this.fluentDesignFormControl1.Size = new System.Drawing.Size(1296, 31);
             this.fluentDesignFormControl1.TabIndex = 2;
             this.fluentDesignFormControl1.TabStop = false;
-            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barSubItem8);
+            this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem1);
             this.fluentDesignFormControl1.TitleItemLinks.Add(this.barButtonItem2);
             // 
             // barButtonItem1
             // 
-            this.barButtonItem1.ActAsDropDown = true;
             this.barButtonItem1.Border = DevExpress.XtraEditors.Controls.BorderStyles.Style3D;
-            this.barButtonItem1.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
             this.barButtonItem1.Caption = "Nhập Mới Thiết Bị";
-            this.barButtonItem1.DropDownControl = this.popupMenu1;
             this.barButtonItem1.Id = 0;
             this.barButtonItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
             this.barButtonItem1.Name = "barButtonItem1";
+            this.barButtonItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem1.Size = new System.Drawing.Size(150, 0);
             this.barButtonItem1.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem1_ItemClick);
-            // 
-            // popupMenu1
-            // 
-            this.popupMenu1.Name = "popupMenu1";
             // 
             // barButtonItem2
             // 
@@ -309,145 +263,6 @@
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem2.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem2_ItemClick);
-            // 
-            // barSubItem1
-            // 
-            this.barSubItem1.Caption = "barSubItem1";
-            this.barSubItem1.Id = 0;
-            this.barSubItem1.Name = "barSubItem1";
-            // 
-            // barSubItem2
-            // 
-            this.barSubItem2.Caption = "barSubItem2";
-            this.barSubItem2.Id = 1;
-            this.barSubItem2.Name = "barSubItem2";
-            // 
-            // barButtonItem3
-            // 
-            this.barButtonItem3.Caption = "barButtonItem3";
-            this.barButtonItem3.Id = 2;
-            this.barButtonItem3.Name = "barButtonItem3";
-            // 
-            // barButtonItem4
-            // 
-            this.barButtonItem4.ActAsDropDown = true;
-            this.barButtonItem4.ButtonStyle = DevExpress.XtraBars.BarButtonStyle.DropDown;
-            this.barButtonItem4.Caption = "barButtonItem4";
-            this.barButtonItem4.DropDownControl = this.popupMenu2;
-            this.barButtonItem4.Id = 3;
-            this.barButtonItem4.Name = "barButtonItem4";
-            // 
-            // popupMenu2
-            // 
-            this.popupMenu2.Name = "popupMenu2";
-            // 
-            // barSubItem3
-            // 
-            this.barSubItem3.Caption = "barSubItem3";
-            this.barSubItem3.Id = 4;
-            this.barSubItem3.Name = "barSubItem3";
-            // 
-            // barButtonItem5
-            // 
-            this.barButtonItem5.Caption = "barButtonItem5";
-            this.barButtonItem5.Id = 5;
-            this.barButtonItem5.Name = "barButtonItem5";
-            // 
-            // barSubItem4
-            // 
-            this.barSubItem4.Caption = "barSubItem4";
-            this.barSubItem4.Id = 6;
-            this.barSubItem4.Name = "barSubItem4";
-            // 
-            // barSubItem5
-            // 
-            this.barSubItem5.Caption = "barSubItem5";
-            this.barSubItem5.Id = 7;
-            this.barSubItem5.Name = "barSubItem5";
-            // 
-            // barButtonItem6
-            // 
-            this.barButtonItem6.Caption = "barButtonItem6";
-            this.barButtonItem6.Id = 8;
-            this.barButtonItem6.Name = "barButtonItem6";
-            // 
-            // barLargeButtonItem1
-            // 
-            this.barLargeButtonItem1.Caption = "barLargeButtonItem1";
-            this.barLargeButtonItem1.Id = 9;
-            this.barLargeButtonItem1.Name = "barLargeButtonItem1";
-            // 
-            // barSubItem6
-            // 
-            this.barSubItem6.Caption = "barSubItem6";
-            this.barSubItem6.Id = 10;
-            this.barSubItem6.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem7),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barButtonItem8)});
-            this.barSubItem6.Name = "barSubItem6";
-            // 
-            // barButtonItem7
-            // 
-            this.barButtonItem7.Caption = "barButtonItem7";
-            this.barButtonItem7.Id = 11;
-            this.barButtonItem7.Name = "barButtonItem7";
-            // 
-            // barButtonItem8
-            // 
-            this.barButtonItem8.Caption = "barButtonItem8";
-            this.barButtonItem8.Id = 12;
-            this.barButtonItem8.Name = "barButtonItem8";
-            // 
-            // barSubItem7
-            // 
-            this.barSubItem7.Caption = "Nhập Thiết Bị Mới";
-            this.barSubItem7.Id = 13;
-            this.barSubItem7.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem7.ImageOptions.Image")));
-            this.barSubItem7.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(((DevExpress.XtraBars.BarLinkUserDefines)((DevExpress.XtraBars.BarLinkUserDefines.Caption | DevExpress.XtraBars.BarLinkUserDefines.PaintStyle))), this.barLargeButtonItem2, "Đã Có Trong Kho", false, false, true, 0, null, DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem3)});
-            this.barSubItem7.Name = "barSubItem7";
-            this.barSubItem7.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barLargeButtonItem2
-            // 
-            this.barLargeButtonItem2.Caption = "Đã Có Trong Kho";
-            this.barLargeButtonItem2.Id = 14;
-            this.barLargeButtonItem2.Name = "barLargeButtonItem2";
-            // 
-            // barLargeButtonItem3
-            // 
-            this.barLargeButtonItem3.Caption = "Chưa Có Trong Kho";
-            this.barLargeButtonItem3.Id = 15;
-            this.barLargeButtonItem3.Name = "barLargeButtonItem3";
-            // 
-            // barSubItem8
-            // 
-            this.barSubItem8.Caption = "Nhập Mới Thiết Bị";
-            this.barSubItem8.Id = 16;
-            this.barSubItem8.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem8.ImageOptions.Image")));
-            this.barSubItem8.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem4),
-            new DevExpress.XtraBars.LinkPersistInfo(this.barLargeButtonItem5)});
-            this.barSubItem8.Name = "barSubItem8";
-            this.barSubItem8.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
-            // 
-            // barLargeButtonItem4
-            // 
-            this.barLargeButtonItem4.Border = DevExpress.XtraEditors.Controls.BorderStyles.Simple;
-            this.barLargeButtonItem4.Caption = "Đã Có Trong Kho";
-            this.barLargeButtonItem4.Id = 17;
-            this.barLargeButtonItem4.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem4.ImageOptions.Image")));
-            this.barLargeButtonItem4.Name = "barLargeButtonItem4";
-            this.barLargeButtonItem4.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem4_ItemClick);
-            // 
-            // barLargeButtonItem5
-            // 
-            this.barLargeButtonItem5.Caption = "Chưa Có Trong Kho";
-            this.barLargeButtonItem5.Id = 18;
-            this.barLargeButtonItem5.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barLargeButtonItem5.ImageOptions.Image")));
-            this.barLargeButtonItem5.Name = "barLargeButtonItem5";
-            this.barLargeButtonItem5.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barLargeButtonItem5_ItemClick);
             // 
             // Form1
             // 
@@ -467,8 +282,6 @@
             this.Text = "Kho-IT";
             ((System.ComponentModel.ISupportInitialize)(this.accordionControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.fluentDesignFormControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.popupMenu2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -499,27 +312,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement18;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement19;
         private DevExpress.XtraBars.Navigation.AccordionControlElement accordionControlElement20;
-        private DevExpress.XtraBars.PopupMenu popupMenu1;
-        private DevExpress.XtraBars.BarSubItem barSubItem1;
-        private DevExpress.XtraBars.BarSubItem barSubItem2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem3;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem4;
-        private DevExpress.XtraBars.BarSubItem barSubItem3;
-        private DevExpress.XtraBars.PopupMenu popupMenu2;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem5;
-        private DevExpress.XtraBars.BarSubItem barSubItem4;
-        private DevExpress.XtraBars.BarSubItem barSubItem5;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem6;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem1;
-        private DevExpress.XtraBars.BarSubItem barSubItem6;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem7;
-        private DevExpress.XtraBars.BarButtonItem barButtonItem8;
-        private DevExpress.XtraBars.BarSubItem barSubItem7;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem2;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem3;
-        private DevExpress.XtraBars.BarSubItem barSubItem8;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem4;
-        private DevExpress.XtraBars.BarLargeButtonItem barLargeButtonItem5;
     }
 }
 

@@ -24,24 +24,24 @@ namespace IT_Kho
 
         private void barButtonItem1_ItemClick(object sender, ItemClickEventArgs e)
         {
-            if (!container.Controls.Contains(Nhapmoi.Instance))
+            if (!container.Controls.Contains(Nhapkho.Instance))
             {
-                container.Controls.Add(Nhapmoi.Instance);
-                Nhapmoi.Instance.Dock = DockStyle.Fill;
-                Nhapmoi.Instance.BringToFront();
+                container.Controls.Add(Nhapkho.Instance);
+                Nhapkho.Instance.Dock = DockStyle.Fill;
+                Nhapkho.Instance.BringToFront();
             }
-            Nhapmoi.Instance.BringToFront();
+            Nhapkho.Instance.BringToFront();
         }
 
         private void accordionControlElement2_Click(object sender, EventArgs e)
         {
-            if (!container.Controls.Contains(Nhapmoi.Instance))
+            if (!container.Controls.Contains(Nhapkho.Instance))
             {
-                container.Controls.Add(Nhapmoi.Instance);
-                Nhapmoi.Instance.Dock = DockStyle.Fill;
-                Nhapmoi.Instance.BringToFront();
+                container.Controls.Add(Nhapkho.Instance);
+                Nhapkho.Instance.Dock = DockStyle.Fill;
+                Nhapkho.Instance.BringToFront();
             }
-            Nhapmoi.Instance.BringToFront();
+            Nhapkho.Instance.BringToFront();
         }
 
         private void barButtonItem2_ItemClick(object sender, ItemClickEventArgs e)
@@ -73,17 +73,6 @@ namespace IT_Kho
 
         private void accordionControlElement20_Click(object sender, EventArgs e)
         {
-            if (!container.Controls.Contains(VatTu.Instance))
-            {
-                container.Controls.Add(VatTu.Instance);
-                VatTu.Instance.Dock = DockStyle.Fill;
-                VatTu.Instance.BringToFront();
-            }
-            VatTu.Instance.BringToFront();
-        }
-
-        private void accordionControlElement19_Click(object sender, EventArgs e)
-        {
             if (!container.Controls.Contains(Taikhoan.Instance))
             {
                 container.Controls.Add(Taikhoan.Instance);
@@ -93,31 +82,15 @@ namespace IT_Kho
             Taikhoan.Instance.BringToFront();
         }
 
-
-
-
-        //Chuyển hướng tới Nhập thiết bị đã có trong kho
-        private void barLargeButtonItem4_ItemClick(object sender, ItemClickEventArgs e)
+        private void accordionControlElement19_Click(object sender, EventArgs e)
         {
-            if (!container.Controls.Contains(Nhapmoi.Instance))
+            if (!container.Controls.Contains(Vattu.Instance))
             {
-                container.Controls.Add(Nhapmoi.Instance);
-                Nhapmoi.Instance.Dock = DockStyle.Fill;
-                Nhapmoi.Instance.BringToFront();
+                container.Controls.Add(Vattu.Instance);
+                Vattu.Instance.Dock = DockStyle.Fill;
+                Vattu.Instance.BringToFront();
             }
-            Nhapmoi.Instance.BringToFront();
-        }
-
-        //Chuyển hướng tới Nhập thiết bị chưa có trong kho
-        private void barLargeButtonItem5_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            if (!container.Controls.Contains(CCTK.Instance))
-            {
-                container.Controls.Add(CCTK.Instance);
-                CCTK.Instance.Dock = DockStyle.Fill;
-                CCTK.Instance.BringToFront();
-            }
-            CCTK.Instance.BringToFront();
+            Vattu.Instance.BringToFront();
         }
     }
 }
