@@ -74,11 +74,11 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(419, 16);
+            this.labelControl1.Location = new System.Drawing.Point(398, 18);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(284, 42);
             this.labelControl1.TabIndex = 0;
-            this.labelControl1.Text = "Nhập Vật Tư Mới";
+            this.labelControl1.Text = "Nhập Mới Vật Tư";
             // 
             // gridControl1
             // 
@@ -106,9 +106,7 @@
             this.gridColumn10,
             this.gridColumn11});
             this.gridView1.GridControl = this.gridControl1;
-            this.gridView1.GroupPanelText = "Nhập vật tư mới";
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsView.ShowFooter = true;
             // 
             // gridColumn1
             // 
@@ -225,7 +223,6 @@
             this.barButtonItem2.Caption = "Export";
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
-            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem2.Size = new System.Drawing.Size(100, 0);
@@ -235,7 +232,6 @@
             this.barButtonItem3.Caption = "Print";
             this.barButtonItem3.Id = 2;
             this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
-            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem3.Size = new System.Drawing.Size(100, 0);
