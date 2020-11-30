@@ -74,7 +74,7 @@
             // 
             this.labelControl1.Appearance.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelControl1.Appearance.Options.UseFont = true;
-            this.labelControl1.Location = new System.Drawing.Point(398, 18);
+            this.labelControl1.Location = new System.Drawing.Point(419, 16);
             this.labelControl1.Name = "labelControl1";
             this.labelControl1.Size = new System.Drawing.Size(284, 42);
             this.labelControl1.TabIndex = 0;
@@ -106,98 +106,78 @@
             this.gridColumn10,
             this.gridColumn11});
             this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.GroupPanelText = "Nhập vật tư mới";
             this.gridView1.Name = "gridView1";
-            this.gridView1.OptionsBehavior.AllowAddRows = DevExpress.Utils.DefaultBoolean.True;
-            this.gridView1.OptionsView.NewItemRowPosition = DevExpress.XtraGrid.Views.Grid.NewItemRowPosition.Top;
-            this.gridView1.ValidateRow += new DevExpress.XtraGrid.Views.Base.ValidateRowEventHandler(this.gridView1_ValidateRow);
+            this.gridView1.OptionsView.ShowFooter = true;
             // 
             // gridColumn1
             // 
-            this.gridColumn1.Caption = "Model";
-            this.gridColumn1.FieldName = "model";
+            this.gridColumn1.Caption = "zsad";
             this.gridColumn1.Name = "gridColumn1";
             this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 3;
+            this.gridColumn1.VisibleIndex = 0;
             // 
             // gridColumn2
             // 
-            this.gridColumn2.Caption = "Mã sản phẩm";
-            this.gridColumn2.FieldName = "masp";
+            this.gridColumn2.Caption = "xsadada";
             this.gridColumn2.Name = "gridColumn2";
             this.gridColumn2.Visible = true;
-            this.gridColumn2.VisibleIndex = 0;
+            this.gridColumn2.VisibleIndex = 1;
             // 
             // gridColumn3
             // 
-            this.gridColumn3.Caption = "Tên sản phẩm";
-            this.gridColumn3.FieldName = "tensp";
+            this.gridColumn3.Caption = "adsada";
             this.gridColumn3.Name = "gridColumn3";
             this.gridColumn3.Visible = true;
-            this.gridColumn3.VisibleIndex = 4;
+            this.gridColumn3.VisibleIndex = 2;
             // 
             // gridColumn4
             // 
-            this.gridColumn4.Caption = "Barcode";
-            this.gridColumn4.FieldName = "barcode";
             this.gridColumn4.Name = "gridColumn4";
             this.gridColumn4.Visible = true;
-            this.gridColumn4.VisibleIndex = 1;
+            this.gridColumn4.VisibleIndex = 3;
             // 
             // gridColumn5
             // 
-            this.gridColumn5.Caption = "Số lượng nhập";
-            this.gridColumn5.FieldName = "slnhap";
             this.gridColumn5.Name = "gridColumn5";
             this.gridColumn5.Visible = true;
-            this.gridColumn5.VisibleIndex = 6;
+            this.gridColumn5.VisibleIndex = 4;
             // 
             // gridColumn6
             // 
-            this.gridColumn6.Caption = "Đơn vị tính";
-            this.gridColumn6.FieldName = "dvt";
             this.gridColumn6.Name = "gridColumn6";
             this.gridColumn6.Visible = true;
             this.gridColumn6.VisibleIndex = 5;
             // 
             // gridColumn7
             // 
-            this.gridColumn7.Caption = "Ngày nhập";
-            this.gridColumn7.FieldName = "ngaynhap";
             this.gridColumn7.Name = "gridColumn7";
             this.gridColumn7.Visible = true;
-            this.gridColumn7.VisibleIndex = 7;
+            this.gridColumn7.VisibleIndex = 6;
             // 
             // gridColumn8
             // 
-            this.gridColumn8.Caption = "Seria-Number";
-            this.gridColumn8.FieldName = "sn";
             this.gridColumn8.Name = "gridColumn8";
             this.gridColumn8.Visible = true;
-            this.gridColumn8.VisibleIndex = 2;
+            this.gridColumn8.VisibleIndex = 7;
             // 
             // gridColumn9
             // 
-            this.gridColumn9.Caption = "Nhà cung cấp";
-            this.gridColumn9.FieldName = "ncc";
             this.gridColumn9.Name = "gridColumn9";
             this.gridColumn9.Visible = true;
-            this.gridColumn9.VisibleIndex = 9;
+            this.gridColumn9.VisibleIndex = 8;
             // 
             // gridColumn10
             // 
-            this.gridColumn10.Caption = "Ghi chú";
-            this.gridColumn10.FieldName = "ghichu";
             this.gridColumn10.Name = "gridColumn10";
             this.gridColumn10.Visible = true;
-            this.gridColumn10.VisibleIndex = 10;
+            this.gridColumn10.VisibleIndex = 9;
             // 
             // gridColumn11
             // 
-            this.gridColumn11.Caption = "Người nhập";
-            this.gridColumn11.FieldName = "manv";
             this.gridColumn11.Name = "gridColumn11";
             this.gridColumn11.Visible = true;
-            this.gridColumn11.VisibleIndex = 8;
+            this.gridColumn11.VisibleIndex = 10;
             // 
             // barManager1
             // 
@@ -245,6 +225,7 @@
             this.barButtonItem2.Caption = "Export";
             this.barButtonItem2.Id = 1;
             this.barButtonItem2.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.Image")));
+            this.barButtonItem2.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem2.ImageOptions.LargeImage")));
             this.barButtonItem2.Name = "barButtonItem2";
             this.barButtonItem2.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem2.Size = new System.Drawing.Size(100, 0);
@@ -254,6 +235,7 @@
             this.barButtonItem3.Caption = "Print";
             this.barButtonItem3.Id = 2;
             this.barButtonItem3.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.Image")));
+            this.barButtonItem3.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem3.ImageOptions.LargeImage")));
             this.barButtonItem3.Name = "barButtonItem3";
             this.barButtonItem3.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.barButtonItem3.Size = new System.Drawing.Size(100, 0);
@@ -302,7 +284,6 @@
             this.Controls.Add(this.barDockControlTop);
             this.Name = "Nhapkho";
             this.Size = new System.Drawing.Size(1123, 632);
-            this.Load += new System.EventHandler(this.Nhapkho_Load);
             ((System.ComponentModel.ISupportInitialize)(this.panelControl1)).EndInit();
             this.panelControl1.ResumeLayout(false);
             this.panelControl1.PerformLayout();
