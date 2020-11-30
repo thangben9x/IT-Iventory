@@ -1,41 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Text;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DevExpress.XtraEditors;
 using DevExpress.XtraGrid.Views.Grid;
-using DevExpress.XtraGrid.Views.Grid.Drawing;
 using DevExpress.XtraGrid;
+using DevExpress.XtraGrid.Views.Grid.Drawing;
 
 namespace IT_Kho
 {
-    public partial class Xuatkho : DevExpress.XtraEditors.XtraUserControl
+    public partial class Nhapmoi : DevExpress.XtraEditors.XtraUserControl
     {
-        public Xuatkho()
+        public Nhapmoi()
         {
             InitializeComponent();
         }
-        private static Xuatkho _instance;
+        private static Nhapmoi _instance;
 
-        public static Xuatkho Instance
+        public static Nhapmoi Instance
         {
             get
             {
                 if (_instance == null)
-                    _instance = new Xuatkho();
+                    _instance = new Nhapmoi();
                 return _instance;
             }
         }
+        //hiển thị
+
         private void hien()
         {
             try
             {
-                string sql = "SELECT Xuat.masp, Xuat.slxuat, Xuat.ngayxuat, Xuat.sn, Xuat.barcode, Xuat.ncc, Xuat.ghichu, Xuat.sohd, VatTu.model, VatTu.tensp, VatTu.dvt, NhanVien.manv FROM Xuat INNER JOIN VatTu ON Xuat.model = VatTu.model INNER JOIN  NhanVien ON Xuat.manv = NhanVien.manv";
+                string sql = "SELECT Nhap.masp, Nhap.slnhap, Nhap.ngaynhap, Nhap.sn, Nhap.barcode, Nhap.ncc, Nhap.ghichu, Nhap.sohd, VatTu.tensp, VatTu.dvt, VatTu.model, NhanVien.manv FROM NhanVien INNER JOIN Nhap ON NhanVien.manv = Nhap.manv INNER JOIN VatTu ON Nhap.model = VatTu.model order by sohd desc";
+
+
+
 
                 gridControl1.DataSource = Connect.getTable(sql);
 
@@ -48,50 +53,13 @@ namespace IT_Kho
 
         }
 
-        private void Xuatkho_Load(object sender, EventArgs e)
+        private void Nhapkho_Load(object sender, EventArgs e)
         {
             hien();
             string sql1 = "select *from NhanVien";
-            repositoryItemLookUpEdit1.DataSource = Connect.getTable(sql1);
+            repositoryItemLookUpEdit1.DataSource= Connect.getTable(sql1);
             repositoryItemLookUpEdit1.ValueMember = "manv";
             repositoryItemLookUpEdit1.DisplayMember = "tennv";
-        }
-
-        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
-        {
-            try
-            {
-                //blinding dữ liệu tương ứng từ cột mã loại khi nhập vào các cell mã vật tư, tên vt, loại từ bảng Vật tư
-                GridView view = sender as GridView;
-                // nếu cột không có giá trị thì trả về....
-                if (view == null) return;
-                {
-                    switch (e.Column.Caption.ToString())
-                    {
-                        case "Model":
-                            string sql2 = @"select tensp,dvt from VatTu where model = '" + view.GetRowCellValue(e.RowHandle, view.Columns[0]).ToString() + "' ";
-                            // thực thi câu lệnh sql thành dạng bảng
-                            DataTable tb = Connect.getTable(sql2);
-                            //blinding dvt
-                            view.SetRowCellValue(e.RowHandle, view.Columns[2], "");
-                            string cellValue2 = "" + tb.Rows[0]["dvt"].ToString().Trim() + "" + view.GetRowCellValue(e.RowHandle, view.Columns[2]).ToString();
-                            view.SetRowCellValue(e.RowHandle, view.Columns[2], cellValue2);
-
-
-
-                            //blinding tenvt
-                            view.SetRowCellValue(e.RowHandle, view.Columns[1], "");
-                            string cellValue1 = "" + tb.Rows[0]["tensp"].ToString().Trim() + "" + view.GetRowCellValue(e.RowHandle, view.Columns[1]).ToString();
-                            view.SetRowCellValue(e.RowHandle, view.Columns[1], cellValue1);
-                            break;
-
-                    }
-                }
-            }
-            catch
-            {
-                XtraMessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập!!");
-            }
         }
 
         private void gridView1_ValidateRow(object sender, DevExpress.XtraGrid.Views.Base.ValidateRowEventArgs e)
@@ -99,7 +67,7 @@ namespace IT_Kho
             string sErr = "";
             bool bVali = true;
             // kiem tra cell cua mot dong dang Edit xem co rong ko?
-            if (gridView1.GetRowCellValue(e.RowHandle, "masp").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "slxuat").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "ngayxuat").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "manv").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "ncc").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "barcode").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "sn").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "ghichu").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "model").ToString() == "")
+            if ( gridView1.GetRowCellValue(e.RowHandle, "masp").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "slnhap").ToString() == ""|| gridView1.GetRowCellValue(e.RowHandle, "ngaynhap").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "manv").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "ncc").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "barcode").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "sn").ToString() == "" || gridView1.GetRowCellValue(e.RowHandle, "ghichu").ToString() == ""|| gridView1.GetRowCellValue(e.RowHandle, "model").ToString() == "")
 
             {
                 // chuỗi thông báo lỗi
@@ -112,8 +80,9 @@ namespace IT_Kho
 
                 string model = gridView1.GetRowCellValue(e.RowHandle, "model").ToString();
                 string masp = gridView1.GetRowCellValue(e.RowHandle, "masp").ToString();
-                string slxuat = gridView1.GetRowCellValue(e.RowHandle, "slxuat").ToString();
-                string ngayxuat = gridView1.GetRowCellValue(e.RowHandle, "ngayxuat").ToString();
+                string slnhap = gridView1.GetRowCellValue(e.RowHandle, "slnhap").ToString();
+                string dvt = gridView1.GetRowCellValue(e.RowHandle, "dvt").ToString();
+                string ngaynhap = gridView1.GetRowCellValue(e.RowHandle, "ngaynhap").ToString();
                 string manv = gridView1.GetRowCellValue(e.RowHandle, "manv").ToString();
                 string ncc = gridView1.GetRowCellValue(e.RowHandle, "ncc").ToString();
                 string sn = gridView1.GetRowCellValue(e.RowHandle, "sn").ToString();
@@ -126,7 +95,7 @@ namespace IT_Kho
                 {
                     try
                     {
-                        string insert = "insert into Xuat values('" + masp + "','" + slxuat + "','" + Convert.ToDateTime(ngayxuat).ToString("MM/dd/yyyy") + "','" + sn + "','" + barcode + "','" + ncc + "','" + ghichu + "','" + manv + "','" + model + "')";
+                        string insert = "insert into Nhap values('" + masp + "','" + slnhap + "','" + Convert.ToDateTime(ngaynhap).ToString("MM/dd/yyyy") + "','" + sn + "','" + barcode + "','" + ncc + "','" + ghichu + "','" + manv + "','" + model + "')";
                         Connect.Query(insert);
                         hien();
                     }
@@ -139,7 +108,7 @@ namespace IT_Kho
                 {
                     try
                     {
-                        string update = "update Xuat set masp = '" + masp + "', slnhap = '" + slxuat + "',ngaynhap = '" + Convert.ToDateTime(ngayxuat).ToString("MM/dd/yyyy") + "', manv = '" + manv + "', ncc ='" + ncc + "' ,ghichu='" + ghichu + "',barcode='" + barcode + "',sn='" + sn + "', model = '" + model + "'where sohd = '" + sohd + "'";
+                        string update = "update Nhap set masp = '" + masp + "', slnhap = '" + slnhap + "',ngaynhap = '" + Convert.ToDateTime(ngaynhap).ToString("MM/dd/yyyy") + "', manv = '" + manv + "', ncc ='" + ncc + "' ,ghichu='" + ghichu + "',barcode='" + barcode + "',sn='" + sn + "', model = '" + model + "'where sohd = '" + sohd + "'";
                         Connect.Query(update);
                         hien();
 
@@ -161,9 +130,47 @@ namespace IT_Kho
             }
         }
 
+        private void gridView1_CellValueChanged(object sender, DevExpress.XtraGrid.Views.Base.CellValueChangedEventArgs e)
+        {
+            try
+            {
+                //blinding dữ liệu tương ứng từ cột mã loại khi nhập vào các cell mã vật tư, tên vt, loại từ bảng Vật tư
+                GridView view = sender as GridView;
+                // nếu cột không có giá trị thì trả về....
+                if (view == null) return;
+                {
+                    switch (e.Column.Caption.ToString())
+                    {
+                        case "Model":
+                            string sql2 = @"select tensp,dvt from VatTu where model = '" + view.GetRowCellValue(e.RowHandle, view.Columns[0]).ToString() + "' ";
+                            // thực thi câu lệnh sql thành dạng bảng
+                            DataTable tb = Connect.getTable(sql2);
+                            //blinding dvt
+                            view.SetRowCellValue(e.RowHandle, view.Columns[2], "");
+                            string cellValue2 = "" + tb.Rows[0]["dvt"].ToString().Trim()+"" + view.GetRowCellValue(e.RowHandle, view.Columns[2]).ToString();
+                            view.SetRowCellValue(e.RowHandle, view.Columns[2], cellValue2);
+
+
+
+                            //blinding tenvt
+                            view.SetRowCellValue(e.RowHandle, view.Columns[1], "");
+                            string cellValue1 = "" + tb.Rows[0]["tensp"].ToString().Trim() + "" + view.GetRowCellValue(e.RowHandle, view.Columns[1]).ToString();
+                            view.SetRowCellValue(e.RowHandle, view.Columns[1], cellValue1);
+                            break;
+
+                    }
+                }
+            }
+            catch
+            {
+                XtraMessageBox.Show("Vui lòng kiểm tra lại dữ liệu nhập!!");
+            }
+        }
+        //button Xóa
+
         private void gridView1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Delete)
+            if(e.KeyCode == Keys.Delete)
             {
                 string sohd = gridView1.GetRowCellValue(gridView1.FocusedRowHandle, "sohd").ToString();
                 DialogResult tb = XtraMessageBox.Show("Bạn có chắc chắn muốn xoá không?", "Chú ý", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
@@ -173,7 +180,7 @@ namespace IT_Kho
                     view.DeleteRow(view.FocusedRowHandle);
                     try
                     {
-                        string delete = "delete from Xuat where sohd ='" + sohd + "' ";
+                        string delete = "delete from Nhap where sohd ='"+sohd+"' ";
                         Connect.Query(delete);
                         hien();
 
@@ -190,7 +197,9 @@ namespace IT_Kho
                 }
             }
         }
+        //tạo trường STT
         bool indicatorIcon = true;
+
         private void gridView1_CustomDrawRowIndicator(object sender, RowIndicatorCustomDrawEventArgs e)
         {
             try
@@ -246,12 +255,12 @@ namespace IT_Kho
             gridview.IndicatorWidth = Convert.ToInt32(size.Width + 0.999f) + GridPainter.Indicator.ImageSize.Width + 10;
         }
 
-        private void barButtonItem4_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        // Xuất ra file exel
+        private void barButtonItem2_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             try
             {
-                string sql3 = "SELECT Xuat.masp, Xuat.slxuat, Xuat.ngayxuat, Xuat.sn, Xuat.barcode, Xuat.ncc, Xuat.ghichu, Xuat.sohd, VatTu.model, VatTu.tensp, VatTu.dvt, NhanVien.manv FROM Xuat INNER JOIN VatTu ON Xuat.model = VatTu.model INNER JOIN  NhanVien ON Xuat.manv = NhanVien.manv";
-
+                string sql3 = "SELECT Nhap.masp, Nhap.slnhap, Nhap.ngaynhap, Nhap.sn, Nhap.barcode, Nhap.ncc, Nhap.ghichu, Nhap.sohd, VatTu.tensp, VatTu.dvt, VatTu.model, NhanVien.manv FROM NhanVien INNER JOIN Nhap ON NhanVien.manv = Nhap.manv INNER JOIN VatTu ON Nhap.model = VatTu.model order by sohd desc";
                 SaveFileDialog saveFileDialogExcel = new SaveFileDialog();
                 saveFileDialogExcel.Filter = "Excel files (*.xlsx)|*.xlsx";
                 if (saveFileDialogExcel.ShowDialog() == DialogResult.OK)
@@ -269,4 +278,5 @@ namespace IT_Kho
             }
         }
     }
+    
 }
